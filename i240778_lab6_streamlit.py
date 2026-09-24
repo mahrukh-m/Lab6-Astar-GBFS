@@ -4,7 +4,7 @@ import heapq
 import networkx as nx
 import matplotlib.pyplot as plt
 # import the necessary functions and variables from searchAlgos.py
-from i240778_lab6 import (
+from i240778_lab6.py import (
     hospital_graph,
     locations,
     greedy_best_first_search,
