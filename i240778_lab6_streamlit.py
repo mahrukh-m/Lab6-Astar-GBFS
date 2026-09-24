@@ -108,7 +108,23 @@ if st.button("Run Search"):
             figsize=(10, 6)
         )
 
-        nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=1500, font_size=10, font_weight='bold', arrows=True, edge_labels=nx.get_edge_attributes(G, 'weight'))   
+        nx.draw(
+            G,
+            pos,
+            ax=ax,
+            with_labels=True,
+            node_color='lightblue',
+            node_size=1500,
+            font_size=10,
+            font_weight='bold',
+            arrows=True
+        )
+        nx.draw_networkx_edge_labels(
+            G,
+            pos,
+            ax=ax,
+            edge_labels=nx.get_edge_attributes(G, 'weight')
+        )
         path_edges = list(zip(path[:-1], path[1:]))
         nx.draw_networkx_edges(G, pos, edgelist=path_edges, edge_color='red', width=2)
 
