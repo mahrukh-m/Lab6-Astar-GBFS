@@ -38,9 +38,9 @@ hospital_graph = {
 
     "Laboratory": {
         "Emergency_Ward": 3.2
-    }
+    },
 
-
+    "Emergency_Ward": {}
 }
 
 
