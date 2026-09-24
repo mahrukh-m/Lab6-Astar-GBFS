@@ -51,13 +51,21 @@ algorithm = st.selectbox(
 if st.button("Run Search"):
 
     if algorithm == "GBFS":
-        path, cost, expansion_order = greedy_best_first_search(start, goal, hospital_graph, locations )
+            path, cost, expansion_order = greedy_best_first_search(
+                start,
+                goal,
+                hospital_graph
+            )
 
         # run the GBFS algorithm with the selected start and goal nodes
         
     else:
         
-        path, cost, expansion_order = a_star_search(start, goal, hospital_graph, locations )
+            path, cost, expansion_order = a_star_search(
+                start,
+                goal,
+                hospital_graph
+            )
 
         # run the A* algorithm with the selected start and goal nodes
         
